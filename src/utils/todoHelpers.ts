@@ -1,7 +1,7 @@
 import type { ToDoItemType } from "../shared/types";
 
 export const filterTasks = (tasks: ToDoItemType[], typeSort: string, valueSearch: string): ToDoItemType[] => {
-    let result = tasks.reverse();
+    let result = tasks;
     if (valueSearch) {
         result = result.filter((el) => el.text.toLowerCase().includes(valueSearch.toLowerCase()));
     }
