@@ -19,6 +19,7 @@ export default function ToDo() {
 
     const addTask = useCallback(
         (text: string) => {
+            if (text.trim().length === 0) return;
             const newTask: ToDoItemType = {
                 id: crypto.randomUUID(),
                 text: text,
@@ -56,10 +57,12 @@ export default function ToDo() {
                 <h1 className={styles["text"]}>TODO LIST</h1>
                 <div className={styles["controls"]}>
                     <InputText placeholder="Поиск" onChange={setInputValue} delay={300} icon={<Search />} iconPosition="right" />
-                    <InputDropdown options={valueSort} value={typeSort} onChange={setTypeSort} />
-                    <Button onClick={() => setOpenModal(true)} btnType="img">
-                        <Plus />
-                    </Button>
+                    <div className={styles["controls_switches"]}>
+                        <InputDropdown options={valueSort} value={typeSort} onChange={setTypeSort} />
+                        <Button onClick={() => setOpenModal(true)} btnType="img">
+                            <Plus />
+                        </Button>
+                    </div>
                 </div>
                 <div className={styles["list"]}>
                     <ToDoList typeSort={typeSort} valueSearch={inputValue} tasks={tasks} deleteTask={deleteTask} toggleComplete={toggleComplete} editTask={editTask} />

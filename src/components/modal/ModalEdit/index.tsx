@@ -12,7 +12,7 @@ const ModalEdit = (props: ModalEditProps) => {
     return (
         <>
             <ModalBase
-                title={"Изменить задачу"}
+                title="Изменить задачу"
                 onCloseModal={switchModal}
                 size="default"
                 footer={
@@ -20,7 +20,7 @@ const ModalEdit = (props: ModalEditProps) => {
                         <Button btnType="white" onClick={switchModal}>
                             Закрыть
                         </Button>
-                        <Button btnType="default" onClick={() => onConfirm(inputValue)}>
+                        <Button btnType="default" onClick={() => onConfirm(inputValue)} disabled={inputValue.trim().length === 0}>
                             Подтвердить
                         </Button>
                     </>

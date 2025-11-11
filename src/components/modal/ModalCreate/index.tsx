@@ -25,7 +25,7 @@ const ModalCreate = (props: ModalCreateProps) => {
                         <Button btnType="white" onClick={switchModal}>
                             Закрыть
                         </Button>
-                        <Button btnType="default" onClick={confirmAdd} disabled={!inputValue}>
+                        <Button btnType="default" onClick={confirmAdd} disabled={inputValue.trim().length === 0}>
                             Подтвердить
                         </Button>
                     </>

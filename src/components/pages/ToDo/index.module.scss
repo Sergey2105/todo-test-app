@@ -1,5 +1,8 @@
 .main {
     padding: 32px;
+    @media screen and (max-width: 768px) {
+        padding: 32px 8px;
+    }
 }
 .text {
     font-size: 26px;
@@ -10,7 +13,19 @@
 }
 .controls {
     display: grid;
-    grid-template-columns: 1fr 250px 50px;
+    grid-template-columns: 4fr 2fr;
     gap: 8px;
     margin-bottom: 30px;
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+    &_switches {
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        gap: 8px;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr 50px;
+        }
+    }
 }
