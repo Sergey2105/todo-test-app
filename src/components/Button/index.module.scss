@@ -1,0 +1,67 @@
+.btn {
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+
+    border: none;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6c63ff;
+    color: #fff;
+    &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__icon {
+        position: absolute;
+        left: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &_img {
+        border-radius: 100%;
+        &-transparent {
+            background-color: #9c97f7;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            padding: 0;
+        }
+    }
+    &_default {
+        border-radius: 8px;
+        padding: 16px 8px;
+        gap: 10px;
+    }
+    &_white {
+        background-color: #fff;
+        color: #6c63ff;
+        border: 2px solid #6c63ff;
+        border-radius: 8px;
+        padding: 16px 8px;
+        gap: 10px;
+    }
+
+    &:disabled {
+        cursor: default;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+@media (hover: hover) {
+    .btn:hover {
+        opacity: 0.8;
+    }
+}
+@media (hover: none) {
+    .btn:active {
+        opacity: 0.7;
+    }
+}

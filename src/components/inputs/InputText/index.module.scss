@@ -1,0 +1,54 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.label {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+.input {
+    width: 100%;
+
+    border: 1px solid #6c63ff;
+    border-radius: 5px;
+    height: 50px;
+
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #a8a4e8;
+
+    &::placeholder {
+        font-size: 16px;
+        line-height: 22px;
+        color: #c3c1e5;
+    }
+    &:focus {
+        outline: none;
+        border-color: #5145cd;
+    }
+    &_left {
+        padding: 11px 16px 11px 40px;
+    }
+    &_right {
+        padding: 11px 40px 11px 16px;
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &_left {
+        left: 10px;
+    }
+    &_right {
+        right: 10px;
+    }
+}
